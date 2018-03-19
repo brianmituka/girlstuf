@@ -13,7 +13,7 @@ class App extends Component {
     
   }
   getProducts(){
-    const url = "http://test.nouveta.tech/girlstuff/api/public/api/frontend/products"
+    const url = "https://test.nouveta.tech/girlstuff/api/public/api/frontend/products"
     axios.get(url)
     .then(response =>{
       console.log(response.data.data);
