@@ -1,0 +1,72 @@
+$primary-green: #077915;
+$primary-orange: #fc7710;
+$white: #fff;
+$gray-eighty: #ccc;
+$gray-light: #999;
+$gray-medium: #666;
+$gray-dark: #333;
+$black: #000;
+$red: #e23d3d;
+$gray-light-bg: #f5f5f5;
+$gray-medium-bg: #f1f1f1;
+$gray-dark-bg: #dddddd;
+$green-light-bg: rgba(147, 220, 156, 0.15);
+
+.product{
+    background: $white;
+    margin: 16px;
+    width: 200px;
+    border-radius: 2px;
+    .product-image{
+        overflow: hidden;
+        border-radius: 2px 2px 0 0;
+        max-height: 200px;
+        img{
+            cursor:zoom-in;
+            width: 100%;
+            height: auto;
+            transition: transform 300ms ease-in;
+            transform: scale(1);
+            @media (min-width: 991px){
+                min-height: 200px;
+            }
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+    .product-name{
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 8px;
+    }
+    .product-price{
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 22px;
+        margin-bottom: 16px;
+        &:before{
+            content: "KSH";
+        }
+    }
+    .product-name,
+    .product-price{
+        color: $gray-medium;
+        padding: 0 16px;
+        text-align: center;
+    }
+    .container{
+        display: flex;
+        display: -webkit-flex;
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 32px;
+    }
+    @media (max-width: 991px){
+        padding: 16px;
+        .container{
+            padding: 0;
+        }
+    }
+}

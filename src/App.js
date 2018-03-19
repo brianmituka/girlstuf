@@ -1,21 +1,48 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Products from './components/Products'
+import axios from 'axios';
+
 
 class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      products: []
+    }
+    
+  }
+  getProducts(){
+    const url = "http://test.nouveta.tech/girlstuff/api/public/api/frontend/products"
+    axios.get(url)
+    .then(response =>{
+      console.log(response.data.data);
+      this.setState({
+        products:response.data.data
+      })
+     
+      
+    })
+   
+    
+  }
+  componentWillMount (){
+    this.getProducts()
+  }
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">GirlStuff</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      
+      <div className="container">
+        {console.log()
+        }
+        <Products
+          allProducts={this.state.products}
+				/>
+        
+      
+        
       </div>
     );
   }
 }
-
 export default App;
