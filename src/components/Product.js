@@ -6,8 +6,8 @@ import React, { Component } from 'react';
 		super(props);
     }
      render() {
-        //  let image_url = "http://test.nouveta.tech/girlstuff/api/public/product-images/84pHUacQR97BVdJYY9J4.jpg"
-        let image = "http://test.nouveta.tech/girlstuff/api/public/product-images/84pHUacQR97BVdJYY9J4.jpg" ;
+        let image_url = "http://test.nouveta.tech/girlstuff/api/public/"
+        let image = image_url + this.props.image ;
         let name = this.props.name;
         let price = this.props.price;
         let id = this.props.id;
