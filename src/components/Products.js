@@ -17,7 +17,7 @@ class Products extends Component {
                 <div>
                     {console.log(product)
                     }
-                     <Product key={product.id} price={product.price} name={product.name} image={product.image}/>
+                     <Product key={Math.random()} price={product.price} name={product.name} image={product.image}/>
                 </div>
             
             )
