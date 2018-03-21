@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Products from './components/Products'
 import axios from 'axios';
+import QuickView from './components/QuickView';
 
 
 class App extends Component {
@@ -8,9 +9,13 @@ class App extends Component {
     super();
 
     this.state = {
-      products: []
+      products: [],
+      viewProduct: {},
+      productModalActive: false
     }
-    
+    this.openView = this.openView.bind(this);
+    this.closeView = this.closeView.bind(this)
+
   }
   getProducts(){
     const url = "https://test.nouveta.tech/girlstuff/api/public/api/frontend/products"
@@ -29,6 +34,21 @@ class App extends Component {
   componentWillMount (){
     this.getProducts()
   }
+  //view Product
+  openView(product){
+    this.setState({
+      viewProduct: product,
+      productModalActive: true
+    })
+
+  }
+  //close product view
+  closeView(){
+    this.setState({
+    
+      productModalActive: false
+    })
+  }
   render() {
     return (
       
@@ -37,8 +57,9 @@ class App extends Component {
         }
         <Products
           allProducts={this.state.products}
+          openView={this.openView}
 				/>
-        
+        <QuickView product={this.state.viewProduct} openView={this.state.productModalActive} closeView={this.state.closeView}/>
       
         
       </div>
