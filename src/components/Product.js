@@ -20,7 +20,7 @@ import React, { Component } from 'react';
         })
     }
      render() {
-        let image_url = "http://test.nouveta.tech/girlstuff/api/public/"
+        let image_url = "https://test.nouveta.tech/girlstuff/api/public/"
         let image = image_url + this.props.image ;
         let name = this.props.name;
         let price = this.props.price;
