@@ -53,13 +53,11 @@ class App extends Component {
     return (
       
       <div className="container">
-        {console.log()
-        }
         <Products
           allProducts={this.state.products}
           openView={this.openView}
 				/>
-        <QuickView product={this.state.viewProduct} openView={this.state.productModalActive} closeView={this.state.closeView}/>
+        <QuickView product={this.state.viewProduct} openView={this.state.productModalActive} closeView={this.closeView}/>
       
         
       </div>

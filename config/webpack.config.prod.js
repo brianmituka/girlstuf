@@ -305,7 +305,7 @@ module.exports = {
         options: {
           cache: {
             maxEntries: 10,
-            name: 'articles-cache'
+            name: 'products-cache'
           }
         }
       }],
