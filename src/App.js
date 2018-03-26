@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Products from './components/Products'
 import axios from 'axios';
 import QuickView from './components/QuickView';
+import Footer from './components/Footer'
 
 
 class App extends Component {
@@ -57,6 +58,7 @@ class App extends Component {
           allProducts={this.state.products}
           openView={this.openView}
 				/>
+        <Footer />
         <QuickView product={this.state.viewProduct} openView={this.state.productModalActive} closeView={this.closeView}/>
       
         
