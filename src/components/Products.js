@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Product from './Product';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup'
+import LoadingProducts from '../loaders/Products';
 
 
 class Products extends Component {
@@ -23,15 +24,19 @@ class Products extends Component {
             )
         });
     let display;
-    display = <CSSTransitionGroup
+    if (productsDetails.length <=0) {
+        display = <LoadingProducts />
+    } else {
+        display = <CSSTransitionGroup
         transitionName = "fadeIn"
         transitionEnterTimeout = {500}
         transitionLeaveTimeout = {300}
         component="div"
         className="products">
         {productsDetails}
-        </CSSTransitionGroup> 
-   
+        </CSSTransitionGroup>  
+    }
+
         return (
             <div className="products-wrapper">
                 
