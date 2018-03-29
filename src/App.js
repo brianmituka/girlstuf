@@ -55,12 +55,12 @@ class App extends Component {
     return (
       
       <div className="container">
+       <Gallery />
         <Products
           allProducts={this.state.products}
           openView={this.openView}
 				/>
         <Footer />
-        <Gallery />
         <QuickView product={this.state.viewProduct} openView={this.state.productModalActive} closeView={this.closeView}/>
       
         

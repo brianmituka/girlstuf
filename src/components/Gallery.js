@@ -19,35 +19,38 @@ class Gallery extends React.Component {
         items: 1
       },
       600: {
-        items: 2
+        items: 1
       },
       1024: {
-        items: 3
+        items: 1
       }
     };
 
     return (
-      <AliceCarousel
-        duration={400}
+        <div className="products" >
+            <AliceCarousel
+        duration={3000}
         autoPlay={true}
-        startIndex = {1}
+        startIndex = {0}
         fadeOutAnimation={true}
         mouseDragEnabled={true}
         playButtonEnabled={false}
         responsive={responsive}
         autoPlayInterval={2000}
-        autoPlayDirection="rtl"
+        autoPlayDirection="ltr"
         buttonsDisabled={true}
         autoPlayActionDisabled={false}
         onSlideChange={this.onSlideChange}
         onSlideChanged={this.onSlideChanged}
       >
-        <img src="/img1" className="yours-custom-class" alt="slide" />
-    <img src="https://test.nouveta.tech/girlstuff/api/public/product-images/pZWQtNWlTKXipP1k7484.jpg" className="yours-custom-class" alt="slide" />
-    <img src="https://test.nouveta.tech/girlstuff/api/public/product-images/pZWQtNWlTKXipP1k7484.jpg" className="yours-custom-class" alt="slide" />
-    <img src="https://test.nouveta.tech/girlstuff/api/public/product-images/pZWQtNWlTKXipP1k7484.jpg" className="yours-custom-class" alt="slide" />
-    <img src="https://test.nouveta.tech/girlstuff/api/public/product-images/pZWQtNWlTKXipP1k7484.jpg" className="yours-custom-class" alt="slide" />
+     
+    <img src="https://test.nouveta.tech/girlstuff/api/public/product-images/01.jpg" className="yours-custom-class" alt="slide" />
+    <img src="https://test.nouveta.tech/girlstuff/api/public/product-images/pop2.jpg" className="yours-custom-class" alt="slide" />
+    <img src="https://test.nouveta.tech/girlstuff/api/public/product-images/tt.jpg" className="yours-custom-class" alt="slide" />
+    <img src="https://test.nouveta.tech/girlstuff/api/public/product-images/01.jpg" className="yours-custom-class" alt="slide" />
       </AliceCarousel>
+        </div>
+      
     );
   }
 }
