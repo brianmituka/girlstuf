@@ -3,6 +3,7 @@ import Products from './components/Products'
 import axios from 'axios';
 import QuickView from './components/QuickView';
 import Footer from './components/Footer'
+import Gallery from './components/Gallery'
 
 
 class App extends Component {
