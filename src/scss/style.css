@@ -269,7 +269,7 @@ footer {
   .quick-view-details .product-price {
     font-size: 18px; }
   .quick-view-details .product-price {
-    color: #ff69B4;
+    color: #ff78bb;
     font-weight: bold;
     font-size: 24px;
     float: right; }
@@ -300,11 +300,11 @@ body {
   box-sizing: border-box; }
 
 ::selection {
-  background: #ff69B4;
+  background: #ff78bb;
   color: #fff; }
 
 ::-moz-selection {
-  background: #ff69B4;
+  background: #ff78bb;
   color: #fff;
   text-shadow: none; }
 
@@ -346,7 +346,7 @@ button {
   border-radius: 2px;
   text-align: center;
   color: #fff;
-  background: #ff69B4;
+  background: #ff78bb;
   border: 0;
   font-weight: 400;
   padding: 0 16px;
@@ -354,11 +354,11 @@ button {
   font-size: inherit;
   cursor: pointer; }
   button:hover {
-    background: #ff9cce; }
+    background: #ffabd5; }
   button:focus {
     outline: none; }
   button:active {
-    background: #ffb6da; }
+    background: #ffc5e2; }
 
 input,
 select {
