@@ -60,6 +60,7 @@ class App extends Component {
           openView={this.openView}
 				/>
         <Footer />
+        <Gallery />
         <QuickView product={this.state.viewProduct} openView={this.state.productModalActive} closeView={this.closeView}/>
       
         
