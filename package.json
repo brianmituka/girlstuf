@@ -62,7 +62,8 @@
     "deploy": "gh-pages -d build"
   },
   "devDependencies": {
-    "gh-pages": "^1.1.0"
+    "gh-pages": "^1.1.0",
+    "react-alice-carousel": "^1.9.1"
   },
   "jest": {
     "collectCoverageFrom": [
