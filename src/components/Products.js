@@ -16,8 +16,7 @@ class Products extends Component {
         productsDetails = this.props.allProducts.map(product =>{
             return(
                 <div>
-                    {/* {console.log(product)
-                    } */}
+
                      <Product key={Math.random()} price={product.price} name={product.name} image={product.image_url} openView={this.props.openView}/>
                 </div>
             
@@ -39,12 +38,7 @@ class Products extends Component {
 
         return (
             <div className="products-wrapper">
-                
-                
-                {/* {console.log("this is the allproducts" ,this.props.allProducts)
-                } */}
              {display}  
-             {/* {productsDetails} */}
             </div>
         );
     }

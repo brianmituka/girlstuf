@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
-import Products from './components/Products'
+
 import axios from 'axios';
-import QuickView from './components/QuickView';
-import Footer from './components/Footer'
+import Header from './components/Header'
 import Gallery from './components/Gallery'
+import Products from './components/Products'
+import Footer from './components/Footer'
+
+//import Navigation from './components/Navigation'
+
+import QuickView from './components/QuickView';
 
 
 class App extends Component {
@@ -12,6 +17,7 @@ class App extends Component {
 
     this.state = {
       products: [],
+      navigation : [],
       viewProduct: {},
       productModalActive: false
     }
@@ -23,7 +29,7 @@ class App extends Component {
     const url = "https://test.nouveta.tech/girlstuff/api/public/api/frontend/products"
     axios.get(url)
     .then(response =>{
-      console.log(response.data.data);
+     //console.log(response.data.data);
       this.setState({
         products:response.data.data
       })
@@ -42,7 +48,7 @@ class App extends Component {
       viewProduct: product,
       productModalActive: true
     })
-
+    console.log("state should be true", this.state.productModalActive);
   }
   //close product view
   closeView(){
@@ -50,18 +56,24 @@ class App extends Component {
     
       productModalActive: false
     })
+    console.log("state should be false", this.state.productModalActive);
+    
   }
   render() {
     return (
       
       <div className="container">
+      <Header	/>
        <Gallery />
         <Products
           allProducts={this.state.products}
           openView={this.openView}
 				/>
+        {/* <Navigation  displayItems={this.state.navigation} /> */}
         <Footer />
         <QuickView product={this.state.viewProduct} openView={this.state.productModalActive} closeView={this.closeView}/>
+        
+        
       
         
       </div>

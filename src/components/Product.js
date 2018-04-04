@@ -13,7 +13,6 @@ import React, { Component } from 'react';
                 image: image,
                 name: name,
                 price: price,
-                id: id
             }
         }, function(){
             this.props.openView(this.state.viewProduct);
