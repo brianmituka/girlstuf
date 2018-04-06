@@ -12,14 +12,14 @@ import QuickView from './components/QuickView';
 
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       products: [],
       navigation : [],
       viewProduct: {},
-      productModalActive: false
+      productModalActive: false,
     }
     this.openView = this.openView.bind(this);
     this.closeView = this.closeView.bind(this)
@@ -42,22 +42,25 @@ class App extends Component {
   componentWillMount (){
     this.getProducts()
   }
-  //view Product
+  
+  closeView(){
+    this.setState({
+    
+      productModalActive: false
+      
+    }
+  )
+   
+
+    console.log("state should be false", this.state.productModalActive);  
+  }
   openView(product){
+    // I'm setting the state here i.e when this function is called, productModalActive becomes true, and a product is passed to it
     this.setState({
       viewProduct: product,
       productModalActive: true
     })
     console.log("state should be true", this.state.productModalActive);
-  }
-  //close product view
-  closeView(){
-    this.setState({
-    
-      productModalActive: false
-    })
-    console.log("state should be false", this.state.productModalActive);
-    
   }
   render() {
     return (
@@ -71,6 +74,8 @@ class App extends Component {
 				/>
         {/* <Navigation  displayItems={this.state.navigation} /> */}
         <Footer />
+        {/* /* here I have passed both methods to the quickViewComponent */}
+        {/* let's go to the browser now */}
         <QuickView product={this.state.viewProduct} openView={this.state.productModalActive} closeView={this.closeView}/>
         
         
