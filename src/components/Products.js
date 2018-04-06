@@ -37,7 +37,7 @@ class Products extends Component {
     }
 
         return (
-            <div className="products-wrapper">
+            <div id="products-wrapper">
              {display}  
             </div>
         );
