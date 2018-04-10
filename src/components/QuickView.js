@@ -23,11 +23,11 @@ class QuickView extends Component {
         // it finds the modal using the ref
         const domNode = ReactDOM.findDOMNode(this.refs.modal);
         if (!domNode || !domNode.contains(event.target)) {
-          //this.closeView();
+          this.props.closeView();
         } 
     }
     handleClose(){
-        //this.closeView();
+        this.props.closeView();
     }
     render() {
         return (
