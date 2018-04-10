@@ -18,7 +18,7 @@ class App extends Component {
     this.state = {
       products: [],
       navigation : [],
-      viewProduct: {},
+      productView: {},
       productModalActive: false,
     }
     this.openView = this.openView.bind(this);
@@ -43,24 +43,21 @@ class App extends Component {
     this.getProducts()
   }
   
+  openView(products){
+    // I'm setting the state here i.e when this function is called, productModalActive becomes true, and a product is passed to it
+    this.setState({
+      productView: products,
+      productModalActive: true
+    })
+    console.log("state should be true", this.state.productModalActive);
+  }
   closeView(){
     this.setState({
     
       productModalActive: false
       
-    }
-  )
-   
-
-    console.log("state should be false", this.state.productModalActive);  
-  }
-  openView(product){
-    // I'm setting the state here i.e when this function is called, productModalActive becomes true, and a product is passed to it
-    this.setState({
-      viewProduct: product,
-      productModalActive: true
     })
-    console.log("state should be true", this.state.productModalActive);
+   console.log("state should be false", this.state.productModalActive);  
   }
   render() {
     return (
@@ -76,7 +73,7 @@ class App extends Component {
         <Footer />
         {/* /* here I have passed both methods to the quickViewComponent */}
         {/* let's go to the browser now */}
-        <QuickView product={this.state.viewProduct} openView={this.state.productModalActive} closeView={this.closeView}/>
+        <QuickView product={this.state.productView} closeView={this.closeView} openView={this.state.productModalActive} />
         
         
       
