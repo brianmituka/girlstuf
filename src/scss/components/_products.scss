@@ -1,13 +1,19 @@
-#products-wrapper {
-    padding-top: 98px !important;
-    animation: slideUp 300ms linear;
-    animation-delay: 150ms;
-    @media (max-width: 991px){
-        padding-top: 68px !important;
-    }
-    @media (max-width: 480px){
+@media (max-width: 480px){
+    .items-wrapper{
         padding-top: 52px;
     }
+}
+
+.items-wrapper {
+    padding-top: 98px;
+    animation: slideUp 300ms linear;
+    animation-delay: 150ms;
+    @media  (max-width: 991px){
+        padding-top: 68px;
+    }
+    // @media (max-width: 480px){
+    //     padding-top: 52px;
+    // }
 }
 
 .products{

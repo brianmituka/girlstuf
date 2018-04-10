@@ -167,7 +167,7 @@ header {
         margin: 2px 0; } }
   .search-form .search-button {
     border-radius: 0 2px 2px 0;
-    background: #077915 url("https://test.nouveta.tech/girlstuff/api/public/product-images/magnito.png") center no-repeat;
+    background: #ff78bb url("https://test.nouveta.tech/girlstuff/api/public/product-images/search.png") center no-repeat;
     width: 96px; }
     @media (max-width: 480px) {
       .search-form .search-button {
@@ -573,16 +573,17 @@ header {
     opacity: 0;
     visibility: hidden; } }
 
-#products-wrapper {
-  padding-top: 98px !important;
+@media (max-width: 480px) {
+  .items-wrapper {
+    padding-top: 52px; } }
+
+.items-wrapper {
+  padding-top: 98px;
   animation: slideUp 300ms linear;
   animation-delay: 150ms; }
   @media (max-width: 991px) {
-    #products-wrapper {
-      padding-top: 68px !important; } }
-  @media (max-width: 480px) {
-    #products-wrapper {
-      padding-top: 52px; } }
+    .items-wrapper {
+      padding-top: 68px; } }
 
 .products {
   display: flex;
