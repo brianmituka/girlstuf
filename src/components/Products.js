@@ -5,10 +5,10 @@ import LoadingProducts from '../loaders/Products';
 
 
 class Products extends Component {
-    constructor() {
-        super();
+    // constructor() {
+    //     super();
         
-    }
+    // }
     
     render() {
         let productsDetails
@@ -37,7 +37,7 @@ class Products extends Component {
     }
 
         return (
-            <div id="products-wrapper">
+            <div className="items-wrapper">
              {display}  
             </div>
         );
