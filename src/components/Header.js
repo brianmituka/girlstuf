@@ -10,10 +10,10 @@ class Header extends Component {
                 </div>
                     
                 <div className="search">
-                    <a className="mobile-search" href="#"><img src="https://test.nouveta.tech/girlstuff/api/public/product-images/magnito.png" alt="search"/></a>
-                    <form action="#" method="get">
-                        <a className="back-button" href="#"><img src="https://res.cloudinary.com/sivadass/image/upload/v1494756030/icons/back.png" alt="back"/></a>
-                        <input type="search" ref="searchBox" placeholder="Search for girly stuff" className="search-keyword"/>
+                    <a className="mobile-search" href=""><img src="https://test.nouveta.tech/girlstuff/api/public/product-images/magnito.png" alt="search"/></a>
+                    <form action="#" method="get" className="search-form">
+                        <a className="back-button" href=""><img src="https://test.nouveta.tech/girlstuff/api/public/product-images/back.png" alt="back"/></a>
+                        <input type="search" ref="searchBox" placeholder="Search girlstuff.co.ke" className="search-keyword"/>
                         <button className="search-button" type="submit"></button>
                     </form>
                 </div>
@@ -35,12 +35,12 @@ class Header extends Component {
                             </tbody>
                         </table>
                     </div>
-                    <a className="cart-icon" href="#" ref="cartButton">
+                    <a className="cart-icon" href="" ref="cartButton">
                         <img src="https://test.nouveta.tech/girlstuff/api/public/product-images/shoppp.png" alt="Cart"/>
                     </a>
                     <div ref="cartPreview">
                         <div className="action-block">
-                            {/* <button type="button">PROCEED TO CHECKOUT</button> */}
+                            <button type="button">CHECKOUT</button>
                         </div>
                     </div>
                 </div>
