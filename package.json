@@ -2,7 +2,7 @@
   "name": "girlstuff",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://brianmituka.github.io/girlstuff",
+  "homepage": "https://nouvetalimited.github.io/girlstuff",
   "dependencies": {
     "autoprefixer": "7.1.6",
     "axios": "^0.16.1",
