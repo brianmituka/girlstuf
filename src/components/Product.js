@@ -4,10 +4,39 @@ import React, { Component } from 'react';
     constructor(props){
         super(props);
         this.state = {
-            viewProduct:{}
+            selectedProduct: {},
+            viewProduct:{},
+            addedToCart: false
         }
     }
-    quickView(image, name, price, id){
+
+    addToCart(image,name,price,id,quantity){
+        this.setState({
+            selectedProduct: {
+                image:image,
+                name:name,
+                price:price,
+                id:id,
+                quantity:quantity
+            }
+        }, function(){
+            this.props.addToCart(this.state.selectedProduct)
+        })
+        this.setState({
+            addedToCart:true
+        }, function(){
+            setTimeout(() => {
+                this.setState({
+                    addedToCart: true,
+                    selectedProduct:{}
+                })
+                
+            }, 3000);
+
+        })
+
+    }
+    quickView(image, name, price){
         this.setState({
             viewProduct: {
                 image: image,
@@ -24,6 +53,7 @@ import React, { Component } from 'react';
         let name = this.props.name;
         let price = this.props.price;
         let id = this.props.id;
+        
         return(
             <div className="product">
                 <div className="product-image">
